@@ -106,8 +106,7 @@ describe('A FigureCalculator', () => {
       const result = figureCalculator.calculateTrianglePerimeter(sideA, sideB, base)
 
       expect(result).toEqual(80)
-      expect(spyAdd).toHaveBeenCalledWith(sideA, sideB)
-      expect(spyAdd).toHaveBeenCalledWith(base, 60)
+      expect(spyAdd).toHaveBeenCalledWith(base, (sideA + sideB))
     })
   })
 
